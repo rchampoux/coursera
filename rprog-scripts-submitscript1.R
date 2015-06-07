@@ -66,19 +66,18 @@ submit <- local({
                         stop("invalid part number")
                 }
         }
+        partlist <- list("pollutantmean-1" = "'pollutantmean' part 1",
+                         "pollutantmean-2" = "'pollutantmean' part 2",
+                         "pollutantmean-3" = "'pollutantmean' part 3",
+                         "pollutantmean-4" = "'pollutantmean' part 4",
+                         "complete-1" = "'complete' part 1",
+                         "complete-2" = "'complete' part 2",
+                         "complete-3" = "'complete' part 3",
+                         "corr-1" = "'corr' part 1",
+                         "corr-2" = "'corr' part 2",
+                         "corr-3" = "'corr' part 3"
+        )
         partPrompt <- function() {
-                partlist <- list("pollutantmean-1" = "'pollutantmean' part 1",
-                                 "pollutantmean-2" = "'pollutantmean' part 2",
-                                 "pollutantmean-3" = "'pollutantmean' part 3",
-                                 "pollutantmean-4" = "'pollutantmean' part 4",
-                                 "complete-1" = "'complete' part 1",
-                                 "complete-2" = "'complete' part 2",
-                                 "complete-3" = "'complete' part 3",
-                                 "corr-1" = "'corr' part 1",
-                                 "corr-2" = "'corr' part 2",
-                                 "corr-3" = "'corr' part 3"
-                                 )
-                
                 pretty_out("Which part(s) are you submitting?")
                 part <- select.list(partlist, multiple=TRUE, graphics=FALSE)
                 names(part)
