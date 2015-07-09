@@ -1,3 +1,11 @@
+# This is a modification of the original submit script for R Programming Assignment 1
+# which allows for more convenient submissions by allowing you to submit multiple parts
+# at once and being able to choose to submit additional parts before exiting.
+
+# The test cases are identical as of July 2015, but that's not guaranteed to be the
+# case so you should compare to the original to be sure.  Also, if you compare these 
+# you'll see what changes you can make to the submit scripts for the following 
+# assignments to have the same convenience with those.
 
 submit <- local({
         getOutput <- function(sid) {
